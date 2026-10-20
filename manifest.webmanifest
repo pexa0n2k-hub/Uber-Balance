@@ -1,12 +1,11 @@
 {
   "name": "Uber Balance",
   "short_name": "Uber Balance",
-  "description": "Control personal de ingresos, gastos y rentabilidad de Uber",
+  "description": "Control personal de ingresos, gastos y jornadas.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0c1015",
   "theme_color": "#101419",
-  "lang": "es-MX",
   "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
