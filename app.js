@@ -119,6 +119,21 @@ let swipeStart=null;
 document.addEventListener('touchstart',e=>{const item=e.target.closest('.swipe-record');if(!item||!e.touches||e.touches.length!==1){swipeStart=null;return}swipeStart={item,x:e.touches[0].clientX,y:e.touches[0].clientY,locked:false};item.style.transition='none'},{passive:true});
 document.addEventListener('touchmove',e=>{if(!swipeStart||!e.touches||!e.touches.length)return;const t=e.touches[0],dx=t.clientX-swipeStart.x,dy=t.clientY-swipeStart.y;if(!swipeStart.locked&&Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)*1.15)swipeStart.locked=true;if(!swipeStart.locked)return;e.preventDefault();const shift=Math.max(-110,Math.min(110,dx));swipeStart.item.style.transform='translateX('+shift+'px)'},{passive:false});
 document.addEventListener('touchend',async e=>{if(!swipeStart||!e.changedTouches||!e.changedTouches.length)return;const s=swipeStart;swipeStart=null;const dx=e.changedTouches[0].clientX-s.x,dy=e.changedTouches[0].clientY-s.y,valid=Math.abs(dx)>=65&&Math.abs(dx)>Math.abs(dy)*1.2;s.item.style.transition='transform .22s cubic-bezier(.2,.8,.2,1)';s.item.style.transform='translateX(0)';if(!valid)return;const type=s.item.dataset.recordType,key=s.item.dataset.recordId;if(dx>0){try{await editRecord(type,key)}catch(err){console.error(err);note('No se pudo modificar: '+(err.message||err),true)}}else{if(!await confirmGlass('¿Eliminar este registro?','Esta acción no se puede deshacer.'))return;try{if(type==='route'){await deleteRecord('sessions',key);await deleteRecord('sessions_compat',key)}else if(type==='fuel'){await deleteRecord('fuel',key);await deleteRecord('expenses',key)}else await deleteRecord('expenses',key);await render();note('Registro eliminado correctamente.')}catch(err){console.error(err);note('No se pudo borrar: '+(err.message||err),true)}}},{passive:true});
+// Navegación robusta: manejar los botones directamente antes que los demás delegados.
+const bottomNav=document.querySelector('body > nav');
+if(bottomNav){
+ bottomNav.style.pointerEvents='auto';bottomNav.style.zIndex='2147482000';
+ bottomNav.addEventListener('click',async e=>{
+  const button=e.target.closest('button[data-tab]');if(!button)return;
+  e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();
+  const nextTab=button.dataset.tab;
+  document.querySelector('#notice')?.remove();
+  if(!['home','route','expense','fuel','days','history','themes'].includes(nextTab))return;
+  tab=nextTab;
+  try{await render();}catch(err){console.error(err);note('No se pudo abrir esta sección. Recarga la página; tus registros siguen guardados.',true)}
+ },true);
+}
+
 document.addEventListener('click',async e=>{
  const crystalBtn=e.target.closest('[data-crystal-choice]');if(crystalBtn){await saveThemePrefs({[crystalBtn.dataset.crystalChoice]:crystalBtn.dataset.value});await render();note('Efecto de cristal aplicado.');return}
  const navStyleBtn=e.target.closest('[data-nav-style]');if(navStyleBtn){await saveThemePrefs({navStyle:navStyleBtn.dataset.navStyle});document.querySelectorAll('[data-nav-style]').forEach(b=>b.classList.toggle('active',b===navStyleBtn));note('Estilo de navegación aplicado.');return}
@@ -131,5 +146,5 @@ else if(f.id==='fuelForm'){let amount=cents(o.amount);if(amount<=0)throw Error('
 else {let amount=cents(o.amount);if(!o.label.trim()||amount<=0)throw Error('Completa concepto e importe.');await put('expenses',{id:id(),label:o.label.trim(),amount,paidDate:o.date,date:o.date,category:'other',costType:'work',sessionId:null,createdAt:Date.now()});tab='home';await render();note('Gasto guardado correctamente.')}}
 catch(err){console.error(err);note('No se guardó: '+(err.message||'error inesperado')+'. Los registros anteriores no se borraron.',true)}finally{saving=false}});
 (async()=>{try{await openDB();await loadThemePrefs();if('serviceWorker'in navigator&&location.protocol!=='file:')
-navigator.serviceWorker.register('./sw.js?build=navstylesfix1',{updateViaCache:'none'}).then(reg=>reg.update()).catch(console.warn);
+navigator.serviceWorker.register('./sw.js?build=navclickfix5',{updateViaCache:'none'}).then(reg=>reg.update()).catch(console.warn);
 ;await render()}catch(e){$('#app').innerHTML='<section class="card"><h1>No se pudo abrir Uber Balance</h1><p>No borres los datos del sitio.</p>'+esc(e.message)+'</section>'}})();

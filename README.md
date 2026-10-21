@@ -11,3 +11,7 @@ Incluye los 28 estilos de las versiones anteriores y agrega 16 opciones nuevas (
 Se conserva la base de datos `uber-balance-db` y la versión IndexedDB 3. No borres los datos del sitio ni el almacenamiento de Chrome.
 
 Nota: estos estilos son adaptaciones visuales para la barra de navegación existente. La comprobación de sintaxis no sustituye la prueba visual en el teléfono.
+
+
+## Reparación de navegación v5
+Esta versión incorpora un manejador directo para los botones inferiores y elimina el aviso anterior al cambiar de sección. Mantiene IndexedDB `uber-balance-db`, versión 3. No borres los datos del sitio.
