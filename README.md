@@ -1,13 +1,25 @@
-# Uber Balance — Barra de navegación personalizable
+# Uber Balance — NavBar Styles v2
 
-Incluye un apartado en Temas para elegir entre 16 estilos de barra inferior: Liquid Glass iOS, Neón Cyberpunk, Minimalista, Pastel, Orbital, Tarjeta flotante, Segmentado Premium, Línea con puntos, Tarjeta con imagen, Reproductor, Hexagonal, Ondas, Gamer, Vertical lateral, Escalera y Circular.
+## Qué incluye
+Conserva los 16 estilos de barra de navegación anteriores y añade 12 nuevos:
+1. Barra flotante con botón central
+2. Sidebar vertical expandible
+3. Segmentada con indicador deslizante
+4. Tarjetas apiladas
+5. Menú circular / radial
+6. Texto editorial minimalista
+7. Navegación en cuadrícula Bento
+8. Barra en forma de ola
+9. Pixel Art / 8 bits
+10. Sci-Fi / HUD
+11. Cristal líquido / refractiva
+12. Dock compacto con zoom
 
 ## Instalar desde Android
 1. Descomprime el ZIP.
-2. Reemplaza los seis archivos incluidos en la raíz del repositorio GitHub.
-3. Guarda los cambios en `main`.
-4. Abre Uber Balance con internet y entra en **Temas → Barra de navegación**.
-5. Toca un estilo; se aplica inmediatamente y se guarda localmente.
+2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los seis archivos incluidos en la raíz.
+3. Guarda los cambios en la rama `main`.
+4. Abre la PWA con internet y ve a **Temas → Barra de navegación**.
 
-## Conservación de datos
-Se mantiene IndexedDB `uber-balance-db`, versión 3. No borres los datos del sitio ni el almacenamiento de Chrome.
+## Protección de datos
+Se conserva IndexedDB `uber-balance-db`, versión `3`. No borres los datos del sitio ni el almacenamiento de Chrome. La caché se versionó para cargar los archivos actualizados.

@@ -96,4 +96,70 @@ body[data-nav-style="steps"]>nav{border-radius:16px!important;background:linear-
 body[data-nav-style="circular-percent"]>nav{border-radius:40px!important;background:#080f1eeF!important}body[data-nav-style="circular-percent"]>nav button{border-radius:50%!important;min-width:49px!important;flex:1 0 49px!important;aspect-ratio:1;padding:5px 1px!important}body[data-nav-style="circular-percent"]>nav button.active{border:2px solid transparent!important;background:linear-gradient(#08142a,#08142a) padding-box,conic-gradient(#00dfff,#a44dff,#00dfff) border-box!important;color:#37eaff!important;box-shadow:0 0 13px #00cfff55!important}
 @media(max-width:430px){.nav-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-nav-style="vertical"]>nav{width:55px!important;right:4px!important}body[data-nav-style="vertical"]>nav button{font-size:9px!important}.nav-style-preview{height:34px}}
 
-</style></head><body><div class="app"><header><div><div class="eyebrow">CORTE DIARIO DE INGRESOS</div><div class="brand">UBER <span>BALANCE</span></div></div><div class="pill">● Guardado local</div></header><main id="app"><div class="card">Cargando Uber Balance…</div></main></div><nav><button class="active" data-tab="home"><span class="ico">◈</span>Inicio</button><button data-tab="route"><span class="ico">🏁</span>Final ruta</button><button data-tab="expense"><span class="ico">↘</span>Gastos</button><button data-tab="fuel"><span class="ico">⛽</span>Gasolina</button><button data-tab="days"><span class="ico">📅</span>Días</button><button data-tab="history"><span class="ico">▤</span>Historial</button><button data-tab="themes"><span class="ico">✦</span>Temas</button></nav><script src="./app.js?v=navstylesv1"></script></body></html>
+
+/* NavBar Styles expansion v2: additional visual systems */
+.nav-floating-center>i.selected,.nav-floating-center i.selected{border-radius:50%;width:25px;height:25px;background:linear-gradient(145deg,#38eaff,#493bff 65%,#f52dff);box-shadow:0 0 16px #168cff,inset 0 1px 2px #fff}
+.nav-sidebar i{border-radius:7px!important;background:#073d35!important;border-color:#00ffc6!important}
+.nav-sliding{background:linear-gradient(90deg,#10172b,#1b2341)!important;box-shadow:inset 0 0 0 1px #9c8aff,0 0 10px #9c43ff!important}
+.nav-sliding i.selected{width:24px;height:28px;border-radius:10px;background:linear-gradient(140deg,#9b2dff,#1978ff)!important}
+.nav-stacked{border-radius:10px!important;background:linear-gradient(135deg,#f6f8ff,#c9d6f7)!important}
+.nav-stacked i{border-radius:7px!important;background:#fff!important;box-shadow:0 3px 7px #52628a66}
+.nav-stacked i.selected{background:linear-gradient(145deg,#56aaff,#3257ed)!important}
+.nav-radial{border-radius:50%!important;background:radial-gradient(circle,#182d65,#070b19 70%)!important;border-color:#8754ff!important}
+.nav-radial i{border-radius:50%!important;border-color:#1b9fff!important}
+.nav-radial i.selected{background:linear-gradient(145deg,#ff3c9c,#623cff)!important;box-shadow:0 0 15px #a13dff}
+.nav-editorial{border:0!important;border-bottom:1px solid #c5c9d4!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.nav-editorial i{border:0!important;border-radius:0!important;background:transparent!important}
+.nav-editorial i.selected{background:linear-gradient(90deg,transparent,#e8edf9,transparent)!important;border-bottom:3px solid #f1f4ff!important;box-shadow:none!important}
+.nav-bento{border-radius:8px!important;background:#101b30!important;gap:3px}
+.nav-bento i{border-radius:5px!important;background:linear-gradient(145deg,#243c66,#18233b)!important}
+.nav-bento i.selected{background:linear-gradient(135deg,#287aff,#5a36ee)!important}
+.nav-wave{border-radius:32px 32px 18px 18px!important;background:linear-gradient(180deg,#f5f2ff,#d6e3ff)!important;border-color:#fff!important;box-shadow:0 -5px 20px #9b8cff66!important}
+.nav-wave i{background:#ffffffa8!important;border-color:#aaaaff!important}
+.nav-wave i.selected{background:linear-gradient(135deg,#d84bff,#4a63ff)!important;box-shadow:0 0 18px #b04dff}
+.nav-pixel{border-radius:0!important;border:3px solid #00f5ff!important;background:#07152b!important;box-shadow:4px 4px 0 #7a24ff!important}
+.nav-pixel i{border-radius:0!important;border:2px solid #00dfff!important;background:#081b31!important}
+.nav-pixel i.selected{background:#ff315b!important;box-shadow:3px 3px 0 #ff315b!important}
+.nav-hud{clip-path:polygon(4% 0,96% 0,100% 35%,96% 100%,4% 100%,0 35%);border-radius:0!important;background:linear-gradient(90deg,#191c20,#080d18)!important;border:1px solid #ff8a36!important;box-shadow:inset 0 0 15px #ff7b2240!important}
+.nav-hud i{border-radius:3px!important;border-color:#ff8a36!important}
+.nav-hud i.selected{background:linear-gradient(145deg,#ff9b38,#e13e1f)!important;box-shadow:0 0 12px #ff792b}
+.nav-refractive{background:linear-gradient(130deg,#e4fbff55,#6fafff22 30%,#fff5ff44 70%,#32d7ff22)!important;border:1px solid #e8fcff!important;box-shadow:inset 0 2px 3px #fff,0 0 18px #4de4ff55,0 8px 25px #0006!important;backdrop-filter:blur(28px) saturate(240%)!important;-webkit-backdrop-filter:blur(28px) saturate(240%)!important}
+.nav-refractive i{border-radius:50%!important;background:linear-gradient(145deg,#ffffff66,#71dfff22)!important;border-color:#d8ffff!important;box-shadow:inset 0 1px #fff}
+.nav-refractive i.selected{background:linear-gradient(145deg,#fff9,#45dfff66,#b94dff77)!important;box-shadow:0 0 14px #52dfff,inset 0 1px 2px #fff}
+.nav-zoomdock{background:#111b2ccc!important;border-radius:38px!important;gap:5px!important}
+.nav-zoomdock i{width:19px!important;height:19px!important;border-radius:50%!important;background:linear-gradient(145deg,#34445e,#0e1728)!important}
+.nav-zoomdock i.selected{width:32px!important;height:32px!important;background:linear-gradient(145deg,#e8f7ff,#167dff 48%,#593bff)!important;box-shadow:0 0 18px #329bff!important}
+body[data-nav-style="floating-center"]>nav{border-radius:28px!important;background:linear-gradient(140deg,#071d40ed,#120c2bed)!important;border:1px solid #4cafff!important;box-shadow:0 0 22px #167dff88,0 9px 26px #0008!important}
+body[data-nav-style="floating-center"]>nav button:nth-child(3){transform:translateY(-8px) scale(1.08);background:linear-gradient(145deg,#00dfff,#5c39ff)!important;border:1px solid #fff!important;border-radius:50%!important;box-shadow:0 0 18px #3a83ff!important}
+body[data-nav-style="sidebar"]>nav{left:8px!important;right:auto!important;bottom:50%!important;transform:translateY(50%)!important;width:66px!important;max-width:66px!important;flex-direction:column!important;gap:5px!important;padding:9px 5px!important;border-radius:22px!important;background:linear-gradient(180deg,#062d2bea,#071520f5)!important;border:1px solid #00ffc688!important;box-shadow:0 0 20px #00ffc633!important}
+body[data-nav-style="sidebar"]>nav button{min-height:48px!important;flex-direction:column!important;font-size:9px!important;padding:6px 2px!important}
+body[data-nav-style="sidebar"]{padding-bottom:10px!important}
+body[data-nav-style="sliding"]>nav{background:#11182af2!important;border:1px solid #8e9dff!important;border-radius:32px!important}
+body[data-nav-style="sliding"]>nav button.active{background:linear-gradient(145deg,#982cff,#315dff)!important;border:1px solid #e6d7ff!important;border-radius:17px!important;box-shadow:0 0 18px #8447ff!important}
+body[data-nav-style="stacked"]>nav{background:transparent!important;border:0!important;box-shadow:none!important;gap:5px!important}
+body[data-nav-style="stacked"]>nav button{background:#e8edfb!important;color:#202a46!important;border:1px solid #fff!important;border-radius:14px!important;box-shadow:0 5px 10px #0003!important;margin:0 1px!important}
+body[data-nav-style="stacked"]>nav button.active{background:linear-gradient(145deg,#fefeff,#dce8ff)!important;color:#2867ef!important;transform:translateY(-5px)!important}
+body[data-nav-style="radial"]>nav{background:radial-gradient(ellipse,#152653f5,#080b19f8)!important;border:1px solid #8a58ff!important;border-radius:40px!important;box-shadow:0 0 24px #713cff55!important}
+body[data-nav-style="radial"]>nav button{border-radius:50%!important}
+body[data-nav-style="radial"]>nav button.active{background:linear-gradient(145deg,#ff3e9f,#633dff)!important;box-shadow:0 0 16px #a64dff!important}
+body[data-nav-style="editorial"]>nav{background:transparent!important;border:0!important;border-top:1px solid #a9b2c8!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important}
+body[data-nav-style="editorial"]>nav button{font-family:Georgia,serif!important;background:transparent!important;border-radius:0!important}
+body[data-nav-style="editorial"]>nav button.active{border-bottom:3px solid #eaf0ff!important;color:#fff!important;background:transparent!important}
+body[data-nav-style="bento"]>nav{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;border-radius:15px!important;background:#09172af5!important;border:1px solid #ffffff30!important}
+body[data-nav-style="bento"]>nav button{border-radius:9px!important;background:linear-gradient(145deg,#263c61,#131d32)!important;margin:2px!important}
+body[data-nav-style="bento"]>nav button.active{background:linear-gradient(135deg,#2587ff,#5b36ed)!important;box-shadow:0 0 13px #367bff!important}
+body[data-nav-style="wave"]>nav{border-radius:30px 30px 15px 15px!important;background:linear-gradient(180deg,#f7f4ff,#cddfff)!important;color:#26315a!important;border:1px solid #fff!important;box-shadow:0 -6px 25px #a18cff66!important}
+body[data-nav-style="wave"]>nav button.active{background:linear-gradient(145deg,#e8bfff,#8e72ff)!important;color:#33205f!important;border-radius:50%!important;transform:translateY(-8px)!important;box-shadow:0 0 20px #bb75ff!important}
+body[data-nav-style="pixel"]>nav{border-radius:0!important;background:#061226!important;border:3px solid #00f5ff!important;box-shadow:4px 4px 0 #8128ff!important}
+body[data-nav-style="pixel"]>nav button{border-radius:0!important;border:1px solid #00dfff55!important;font-family:monospace!important;text-transform:uppercase!important}
+body[data-nav-style="pixel"]>nav button.active{background:#ff315b!important;color:#fff!important;box-shadow:3px 3px 0 #ff315b!important}
+body[data-nav-style="hud"]>nav{clip-path:polygon(3% 0,97% 0,100% 35%,97% 100%,3% 100%,0 35%)!important;border-radius:0!important;background:linear-gradient(90deg,#1a1d20f5,#070c15f5)!important;border:1px solid #ff8a36!important;box-shadow:inset 0 0 20px #ff792b33!important}
+body[data-nav-style="hud"]>nav button.active{background:linear-gradient(145deg,#ff9d3c,#e34321)!important;color:#fff!important;clip-path:polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%)!important}
+body[data-nav-style="refractive"]>nav{background:linear-gradient(130deg,#e4fbff55,#6fafff22 30%,#fff5ff44 70%,#32d7ff22)!important;border:1px solid #e8fcff!important;box-shadow:inset 0 2px 3px #fff,0 0 18px #4de4ff55,0 8px 25px #0006!important;backdrop-filter:blur(28px) saturate(240%)!important;-webkit-backdrop-filter:blur(28px) saturate(240%)!important}
+body[data-nav-style="refractive"]>nav button.active{background:linear-gradient(145deg,#ffffff66,#45dfff66,#b94dff77)!important;border:1px solid #fff!important;border-radius:50%!important;box-shadow:0 0 17px #52dfff,inset 0 1px 2px #fff!important}
+body[data-nav-style="zoomdock"]>nav{background:#101a2ddc!important;border-radius:40px!important;gap:4px!important}
+body[data-nav-style="zoomdock"]>nav button{transition:transform .2s,background .2s!important}
+body[data-nav-style="zoomdock"]>nav button.active{transform:translateY(-6px) scale(1.08)!important;background:linear-gradient(145deg,#e8f7ff,#167dff 48%,#593bff)!important;color:white!important;border:1px solid #fff!important;border-radius:50%!important;box-shadow:0 0 18px #329bff!important}
+@media(max-width:430px){body[data-nav-style="sidebar"]>nav{left:4px!important;width:54px!important;max-width:54px!important}body[data-nav-style="sidebar"]>nav button{min-height:43px!important;font-size:8px!important}}
+
+</style></head><body><div class="app"><header><div><div class="eyebrow">CORTE DIARIO DE INGRESOS</div><div class="brand">UBER <span>BALANCE</span></div></div><div class="pill">● Guardado local</div></header><main id="app"><div class="card">Cargando Uber Balance…</div></main></div><nav><button class="active" data-tab="home"><span class="ico">◈</span>Inicio</button><button data-tab="route"><span class="ico">🏁</span>Final ruta</button><button data-tab="expense"><span class="ico">↘</span>Gastos</button><button data-tab="fuel"><span class="ico">⛽</span>Gasolina</button><button data-tab="days"><span class="ico">📅</span>Días</button><button data-tab="history"><span class="ico">▤</span>Historial</button><button data-tab="themes"><span class="ico">✦</span>Temas</button></nav><script src="./app.js?v=navstylesv2"></script></body></html>

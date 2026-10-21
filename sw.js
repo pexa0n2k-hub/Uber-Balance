@@ -1,5 +1,5 @@
-const CACHE='uber-balance-navstyles-v1';
-const ASSETS=['./','./index.html','./app.js?v=navstylesv1','./manifest.webmanifest','./icon.svg'];
+const CACHE='uber-balance-navstyles-v2';
+const ASSETS=['./','./index.html','./app.js?v=navstylesv2','./manifest.webmanifest','./icon.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('uber-balance-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
