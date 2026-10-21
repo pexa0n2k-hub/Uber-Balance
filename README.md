@@ -1,6 +1,6 @@
-# Uber Balance — Corrección completa v0.1.3
+# Uber Balance — Crystal Studio
 
-## Archivos
+## Archivos para reemplazar en GitHub
 - `index.html`
 - `app.js`
 - `sw.js`
@@ -8,11 +8,11 @@
 - `icon.svg`
 
 ## Instalación desde Android
-1. Descomprime el ZIP.
-2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los archivos por los incluidos aquí.
+1. Descomprime este ZIP.
+2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los cinco archivos de la raíz por los incluidos aquí.
 3. Guarda los cambios en la rama `main`.
-4. Abre la PWA con conexión a internet y espera unos segundos a que actualice.
-5. Entra en **Jornada**, registra fecha, hora y odómetro y pulsa **Iniciar jornada**. La app debe abrir **Historial** y mostrar la jornada verificada.
+4. Abre la PWA con conexión y entra en Temas → Crystal Studio.
+5. Si no aparece enseguida, cierra y vuelve a abrir el acceso directo con internet.
 
 ## Protección de datos
-La base conserva el nombre `uber-balance-db`. La migración crea únicamente almacenes faltantes; no borra ni recrea `sessions`, `expenses`, `fuel` o `settings`. Si encuentra un almacén `sessions` con una clave incompatible, usa un almacén auxiliar `sessions_compat` sin tocar el original. No borres almacenamiento del sitio ni datos de Chrome.
+Esta versión mantiene el nombre `uber-balance-db` y la versión IndexedDB `3`. No elimina ni recrea registros; las preferencias nuevas de cristal se guardan dentro de `settings` junto a las preferencias existentes. No borres los datos del sitio ni el almacenamiento de Chrome.
