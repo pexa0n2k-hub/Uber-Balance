@@ -15,3 +15,7 @@ Reemplaza en la raíz del repositorio los seis archivos incluidos: `index.html`,
 Se conserva `uber-balance-db` y `VER=3`. No borres los datos del sitio, no limpies el almacenamiento de Chrome y no desinstales la PWA para actualizar.
 
 Nota: el JavaScript se valida por sintaxis; la apariencia final depende del navegador y del fondo visible detrás de los paneles.
+
+
+## Nuevo estilo
+Se añadió **Glass Morphism** en Temas → Crystal Studio, con vidrio translúcido, bisel doble, reflejos claros y relieve neumórfico. Mantiene `uber-balance-db` versión 3.

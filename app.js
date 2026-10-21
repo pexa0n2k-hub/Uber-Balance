@@ -46,6 +46,25 @@ body[data-crystal-motion="true"] .card,body[data-crystal-motion="true"] .btn{tra
 body[data-crystal-motion="true"] .card:active,body[data-crystal-motion="true"] .btn:active{transform:scale(.985)}
 .crystal-studio{display:grid;gap:14px;margin-top:18px}.crystal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.crystal-choice{padding:12px 10px;text-align:left;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(255,255,255,.055);color:inherit;font:inherit}.crystal-choice.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),inset 0 1px 0 rgba(255,255,255,.5)}.crystal-choice strong,.crystal-choice small{display:block}.crystal-choice small{opacity:.72;margin-top:4px}.crystal-control{display:grid;gap:7px;margin:12px 0}.crystal-control input[type=range]{width:100%;accent-color:var(--accent)}.crystal-control select{width:100%;padding:11px;border-radius:12px;color:inherit;background:rgba(20,25,40,.82);border:1px solid rgba(255,255,255,.2)}
 @media(max-width:420px){.crystal-choice{padding:10px 8px}}
+/* Morphism: vidrio óptico con borde biselado doble, centro translúcido y relieve neumórfico. */
+body[data-crystal-style="morphism"] .card,
+body[data-crystal-style="morphism"] .metric,
+body[data-crystal-style="morphism"] .theme-option,
+body[data-crystal-style="morphism"] .crystal-preview,
+body[data-crystal-style="morphism"] .btn,
+body[data-crystal-style="morphism"]>nav{
+ border:1px solid rgba(244,250,255,var(--crystal-edge))!important;
+ background:linear-gradient(145deg,rgba(255,255,255,var(--crystal-highlight)) 0%,rgba(220,239,255,var(--crystal-low)) 16%,rgba(100,130,170,var(--crystal-mid)) 52%,rgba(255,255,255,var(--crystal-low)) 100%)!important;
+ box-shadow:inset 1px 1px 0 rgba(255,255,255,var(--crystal-highlight)),inset -1px -2px 0 rgba(255,255,255,var(--crystal-bottom)),inset 0 0 0 2px rgba(220,240,255,var(--crystal-low)),0 3px 5px rgba(4,12,28,var(--crystal-depth-shadow)),0 15px 32px rgba(4,12,28,var(--crystal-depth-shadow)),0 0 18px var(--crystal-glow)!important;
+ backdrop-filter:blur(var(--crystal-blur)) saturate(175%)!important;-webkit-backdrop-filter:blur(var(--crystal-blur)) saturate(175%)!important;
+}
+body[data-crystal-style="morphism"] .card,body[data-crystal-style="morphism"] .metric,body[data-crystal-style="morphism"] .theme-option,body[data-crystal-style="morphism"] .crystal-preview{position:relative;overflow:hidden;border-radius:28px!important}
+body[data-crystal-style="morphism"] .card::before,body[data-crystal-style="morphism"] .metric::before,body[data-crystal-style="morphism"] .theme-option::before,body[data-crystal-style="morphism"] .crystal-preview::before{
+ content:"";position:absolute;inset:1px;border-radius:inherit;pointer-events:none;background:linear-gradient(128deg,rgba(255,255,255,var(--crystal-highlight)),transparent 18%,transparent 68%,rgba(255,255,255,var(--crystal-bottom)));opacity:1
+}
+body[data-crystal-style="morphism"] .btn{border-radius:999px!important;min-height:48px;}
+body[data-crystal-style="morphism"]>nav{border-radius:28px!important}
+body[data-crystal-style="morphism"] .card.hero{background:linear-gradient(145deg,rgba(225,245,255,var(--crystal-fill)),rgba(70,100,145,var(--crystal-mid)),rgba(225,245,255,var(--crystal-low)))!important}
 `;
 function applyTheme(){
  const t=themePrefs.theme||'liquid',root=document.documentElement,body=document.body;
@@ -83,7 +102,7 @@ function themesPage(){
  const choice=(key,items)=>items.map(x=>'<button type="button" class="crystal-choice '+((themePrefs[key]||'')===x.id?'active':'')+'" data-crystal-choice="'+key+'" data-value="'+x.id+'"><strong>'+x.name+'</strong><small>'+x.desc+'</small></button>').join('');
  return `<div class="eyebrow">TU APP, TU ESTILO</div><h1>Personaliza Uber Balance</h1><p class="muted">Elige un tema base y después diseña tu propio cristal.</p><section class="theme-grid">${themes.map(t=>`<button type="button" class="theme-option ${themePrefs.theme===t.id?'selected':''}" data-theme-choice="${t.id}"><span class="${t.preview}"><span class="preview-top"><i></i><b></b><b></b></span><span class="preview-hero"><small>GANANCIA NETA</small><strong>$428.50</strong><i></i></span><span class="preview-tiles"><i></i><i></i><i></i></span><span class="preview-nav"><i></i><i></i><i></i><i></i></span></span><span class="theme-copy"><strong>${t.name}</strong><small>${t.desc}</small><span class="swatches">${t.colors.map(color=>`<i style="background:${color}"></i>`).join('')}</span></span>${themePrefs.theme===t.id?'<span class="theme-check">✓</span>':''}</button>`).join('')}</section>
  <section class="card theme-customizer crystal-studio"><h2>✧ Crystal Studio</h2><p class="muted small">Personaliza el efecto Liquid Glass. Los cambios se guardan en este dispositivo y no afectan tus registros.</p>
- <h3>1. Tipo de cristal</h3><div class="crystal-grid">${choice('crystalStyle',[{id:'jelly',name:'Crystal Jelly',desc:'Gelatina transparente y redondeada'},{id:'ios',name:'Liquid iOS',desc:'Cristal fino estilo iPhone'},{id:'finance',name:'Finance Crystal',desc:'Elegante, sobrio y profesional'},{id:'iridescent',name:'Iridescente',desc:'Reflejos tornasolados'}])}</div>
+ <h3>1. Tipo de cristal</h3><div class="crystal-grid">${choice('crystalStyle',[{id:'jelly',name:'Crystal Jelly',desc:'Gelatina transparente y redondeada'},{id:'ios',name:'Liquid iOS',desc:'Cristal fino estilo iPhone'},{id:'finance',name:'Finance Crystal',desc:'Elegante, sobrio y profesional'},{id:'iridescent',name:'Iridescente',desc:'Reflejos tornasolados'},{id:'morphism',name:'Glass Morphism',desc:'Vidrio óptico con bisel y relieve neumórfico'}])}</div>
  <h3>2. Intensidad</h3><div class="crystal-grid">${choice('crystalIntensity',[{id:'premium',name:'Premium',desc:'Sutil y ligero'},{id:'crystal',name:'Crystal',desc:'Cristal marcado'},{id:'ultra',name:'Ultra Crystal',desc:'Máximo efecto transparente'}])}</div>
  <h3>3. Tono del cristal</h3><div class="crystal-grid">${choice('crystalTone',[{id:'ice',name:'Hielo / Plata',desc:'Blanco cristalino'},{id:'cyan',name:'Cian / Azul',desc:'Frío futurista'},{id:'iris',name:'Iris',desc:'Violeta tornasol'},{id:'emerald',name:'Esmeralda',desc:'Verde vidrio'},{id:'rose',name:'Rosa perla',desc:'Cristal rosado'}])}</div>
  <div class="crystal-control"><label for="crystalTransparency">Transparencia <strong id="transparencyValue">${themePrefs.crystalTransparency??72}%</strong></label><input id="crystalTransparency" type="range" min="20" max="92" value="${themePrefs.crystalTransparency??72}"></div>
