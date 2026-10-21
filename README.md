@@ -1,13 +1,13 @@
-# Uber Balance — Día por día v1
+# Uber Balance — Barra de navegación personalizable
 
-## Archivos
-Reemplaza los cinco archivos de la raíz del repositorio: `index.html`, `app.js`, `sw.js`, `manifest.webmanifest` e `icon.svg`.
+Incluye un apartado en Temas para elegir entre 16 estilos de barra inferior: Liquid Glass iOS, Neón Cyberpunk, Minimalista, Pastel, Orbital, Tarjeta flotante, Segmentado Premium, Línea con puntos, Tarjeta con imagen, Reproductor, Hexagonal, Ondas, Gamer, Vertical lateral, Escalera y Circular.
 
-## Cambios
-- Nuevo apartado **Días** con resumen de ingresos Uber, gasolina, otros gastos y ganancia neta por fecha.
-- Cada fecha se puede desplegar para consultar sus movimientos individuales.
-- **Historial** muestra solo los movimientos de hoy; comienza vacío al iniciar un día nuevo. Los registros anteriores no se borran y siguen disponibles en **Días**.
-- Se conserva la edición y eliminación de movimientos mediante el mismo gesto del historial.
+## Instalar desde Android
+1. Descomprime el ZIP.
+2. Reemplaza los seis archivos incluidos en la raíz del repositorio GitHub.
+3. Guarda los cambios en `main`.
+4. Abre Uber Balance con internet y entra en **Temas → Barra de navegación**.
+5. Toca un estilo; se aplica inmediatamente y se guarda localmente.
 
-## Protección de datos
-Se conserva IndexedDB `uber-balance-db`, versión `3`, y los almacenes existentes. No borres datos del sitio ni el almacenamiento de Chrome.
+## Conservación de datos
+Se mantiene IndexedDB `uber-balance-db`, versión 3. No borres los datos del sitio ni el almacenamiento de Chrome.
