@@ -1,25 +1,13 @@
-# Uber Balance — NavBar Styles v2
+# Uber Balance — NavBar Styles v3
 
-## Qué incluye
-Conserva los 16 estilos de barra de navegación anteriores y añade 12 nuevos:
-1. Barra flotante con botón central
-2. Sidebar vertical expandible
-3. Segmentada con indicador deslizante
-4. Tarjetas apiladas
-5. Menú circular / radial
-6. Texto editorial minimalista
-7. Navegación en cuadrícula Bento
-8. Barra en forma de ola
-9. Pixel Art / 8 bits
-10. Sci-Fi / HUD
-11. Cristal líquido / refractiva
-12. Dock compacto con zoom
+Incluye los 28 estilos de las versiones anteriores y agrega 16 opciones nuevas (29–44): Isométrica 3D, Curva Orgánica, Tab Bar tipo iOS 26, Tarjeta Elevada, Línea Progresiva, Hexagonal Gamer, Sidebar Inferior Expandible, Barra Circular Giratoria, Minimalista Split, Pantalla Completa Interactiva, Blur / Cristal Flotante, Con Texto y Contador, Anime / NeoTokyo, Dock Curvo con Reflejo, Nav Lateral tipo Píldora y Barra Inferior con Notch.
 
 ## Instalar desde Android
 1. Descomprime el ZIP.
-2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los seis archivos incluidos en la raíz.
+2. Reemplaza los seis archivos incluidos en la raíz del repositorio GitHub.
 3. Guarda los cambios en la rama `main`.
-4. Abre la PWA con internet y ve a **Temas → Barra de navegación**.
+4. Abre Uber Balance con internet y entra en Temas → Barra de navegación.
 
-## Protección de datos
-Se conserva IndexedDB `uber-balance-db`, versión `3`. No borres los datos del sitio ni el almacenamiento de Chrome. La caché se versionó para cargar los archivos actualizados.
+Se conserva la base de datos `uber-balance-db` y la versión IndexedDB 3. No borres los datos del sitio ni el almacenamiento de Chrome.
+
+Nota: estos estilos son adaptaciones visuales para la barra de navegación existente. La comprobación de sintaxis no sustituye la prueba visual en el teléfono.
