@@ -1,21 +1,13 @@
-# Uber Balance — Crystal Studio Reference Fix 3
-
-Esta versión ajusta el Liquid Glass tomando como referencia los ejemplos enviados: cristal con bordes biselados, reflejos blancos, transparencia, desenfoque y sombras de profundidad.
+# Uber Balance — Día por día v1
 
 ## Archivos
-Reemplaza en la raíz del repositorio los seis archivos incluidos: `index.html`, `app.js`, `sw.js`, `manifest.webmanifest`, `icon.svg` y `README.md`.
+Reemplaza los cinco archivos de la raíz del repositorio: `index.html`, `app.js`, `sw.js`, `manifest.webmanifest` e `icon.svg`.
 
 ## Cambios
-- Jelly, Liquid iOS, Finance e Iridescente tienen tratamientos distintos.
-- Transparencia, reflejos y profundidad se recalculan en vivo y afectan el CSS real de las superficies.
-- El selector de superficies limita el efecto al área seleccionada.
-- Cache actualizado para que el navegador solicite la versión nueva.
+- Nuevo apartado **Días** con resumen de ingresos Uber, gasolina, otros gastos y ganancia neta por fecha.
+- Cada fecha se puede desplegar para consultar sus movimientos individuales.
+- **Historial** muestra solo los movimientos de hoy; comienza vacío al iniciar un día nuevo. Los registros anteriores no se borran y siguen disponibles en **Días**.
+- Se conserva la edición y eliminación de movimientos mediante el mismo gesto del historial.
 
-## Protección de registros
-Se conserva `uber-balance-db` y `VER=3`. No borres los datos del sitio, no limpies el almacenamiento de Chrome y no desinstales la PWA para actualizar.
-
-Nota: el JavaScript se valida por sintaxis; la apariencia final depende del navegador y del fondo visible detrás de los paneles.
-
-
-## Nuevo estilo
-Se añadió **Glass Morphism** en Temas → Crystal Studio, con vidrio translúcido, bisel doble, reflejos claros y relieve neumórfico. Mantiene `uber-balance-db` versión 3.
+## Protección de datos
+Se conserva IndexedDB `uber-balance-db`, versión `3`, y los almacenes existentes. No borres datos del sitio ni el almacenamiento de Chrome.
