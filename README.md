@@ -1,4 +1,4 @@
-# Uber Balance — Crystal Studio
+# Uber Balance — Crystal Studio — controles corregidos
 
 ## Archivos para reemplazar en GitHub
 - `index.html`
@@ -11,7 +11,7 @@
 1. Descomprime este ZIP.
 2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los cinco archivos de la raíz por los incluidos aquí.
 3. Guarda los cambios en la rama `main`.
-4. Abre la PWA con conexión y entra en Temas → Crystal Studio.
+4. Abre la PWA con conexión y entra en Temas → Crystal Studio — controles corregidos.
 5. Si no aparece enseguida, cierra y vuelve a abrir el acceso directo con internet.
 
 ## Protección de datos
