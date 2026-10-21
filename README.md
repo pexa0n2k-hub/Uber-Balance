@@ -1,18 +1,17 @@
-# Uber Balance — Crystal Studio — controles corregidos
+# Uber Balance — Crystal Studio Reference Fix 3
 
-## Archivos para reemplazar en GitHub
-- `index.html`
-- `app.js`
-- `sw.js`
-- `manifest.webmanifest`
-- `icon.svg`
+Esta versión ajusta el Liquid Glass tomando como referencia los ejemplos enviados: cristal con bordes biselados, reflejos blancos, transparencia, desenfoque y sombras de profundidad.
 
-## Instalación desde Android
-1. Descomprime este ZIP.
-2. En el repositorio `pexa0n2k-hub/Uber-Balance`, reemplaza los cinco archivos de la raíz por los incluidos aquí.
-3. Guarda los cambios en la rama `main`.
-4. Abre la PWA con conexión y entra en Temas → Crystal Studio — controles corregidos.
-5. Si no aparece enseguida, cierra y vuelve a abrir el acceso directo con internet.
+## Archivos
+Reemplaza en la raíz del repositorio los seis archivos incluidos: `index.html`, `app.js`, `sw.js`, `manifest.webmanifest`, `icon.svg` y `README.md`.
 
-## Protección de datos
-Esta versión mantiene el nombre `uber-balance-db` y la versión IndexedDB `3`. No elimina ni recrea registros; las preferencias nuevas de cristal se guardan dentro de `settings` junto a las preferencias existentes. No borres los datos del sitio ni el almacenamiento de Chrome.
+## Cambios
+- Jelly, Liquid iOS, Finance e Iridescente tienen tratamientos distintos.
+- Transparencia, reflejos y profundidad se recalculan en vivo y afectan el CSS real de las superficies.
+- El selector de superficies limita el efecto al área seleccionada.
+- Cache actualizado para que el navegador solicite la versión nueva.
+
+## Protección de registros
+Se conserva `uber-balance-db` y `VER=3`. No borres los datos del sitio, no limpies el almacenamiento de Chrome y no desinstales la PWA para actualizar.
+
+Nota: el JavaScript se valida por sintaxis; la apariencia final depende del navegador y del fondo visible detrás de los paneles.
